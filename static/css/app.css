@@ -1,6 +1,6 @@
 body{
-  background-color: #6a1520; /*#2485a7; */
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  background-color:#ff6600 ;/* #6a1520; #2485a7; */
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@ body{
   overflow: hidden;
   vertical-align: middle;
   font-size: 13px;
-} 
+}
 .menu-div li{
   display: inline-block;
   position: relative;
