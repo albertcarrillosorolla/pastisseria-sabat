@@ -1,0 +1,19 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %}{% endblock %}
+{% block content %}
+<div class="fullheight">
+  <img class="logo" src="{{ cms.home.logo|imageCrop(192, 170) }}"/>
+</div>
+<div class="menu-div">
+<img id="menu-logo" src="{{ cms.home.logomenu|imageCrop(50, 27) }}"/>
+<ul>
+  <li><button id="tradiciolink">{{ cms.tradicioqualitat.name|upper }}</button></li>
+  <li><button id="creacionslink">{{ cms.lesnostrescreacions.name|upper }}</button></li>
+  <li><button id="establimentslink">{{ cms.establiments.name|upper }}</button></li>
+  <li><button id="noticieslink">{{ cms.noticiespage.name|upper }}</button></li>
+  <li><button id="contactalink">{{ cms.contacta.name|upper }}</button></li>
+</ul></div>
+<div id="contentdiv" class="fullheight contentdiv">
+  <div id="contentloader"></div>
+</div>
+{% endblock %}

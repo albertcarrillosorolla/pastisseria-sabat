@@ -1,0 +1,15 @@
+
+<h1>{{ cms.lesnostrescreacions.name }}</h1>
+ <ul>
+    {% for row in cms.lesnostrescreacions.grid %}
+        <li>
+          {{ row.nom }}
+        </li>
+        <li>
+          {{ row.text }}
+        </li>
+        <li>
+            <img src="{{ row.image|imageSize(200, 200) }}" />
+        </li>
+    {% endfor %}
+</ul>
