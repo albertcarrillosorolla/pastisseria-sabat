@@ -2,7 +2,7 @@ body{
   background-color:#6a1520; /*#2485a7; */
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 .fullheight{
   height: calc(100vh - 45px);
