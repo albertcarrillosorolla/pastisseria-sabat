@@ -3,6 +3,10 @@
 </div>
 <div class="menu-div">
 <img id="menu-logo" src="{{ cms.home.logomenu|imageCrop(50, 27) }}"/>
+
+  {% set data = cms.noticies %}
+  {% set data = data|sort('publish_date', true) %}
+
 <ul>
   <li><a data-role="ajax" href="/tradicioqualitat" id="tradiciolink">{{ cms.tradicioqualitat.name|upper }}</a></li>
   <li><a data-role="ajax" href="/lesnostrescreacions" id="creacionslink">{{ cms.lesnostrescreacions.name|upper }}</a></li>

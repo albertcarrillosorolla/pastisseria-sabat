@@ -1,0 +1,25 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %}{% endblock %}
+{% block content %}
+<div id="contentdiv" class="fullheight contentdiv">
+  <div id="contentloader" class="fragment">
+    {% set data = cms.noticies %}
+    {% set data = data|sort('publish_date', false) %}
+    {% set data = paginate(data, 1) %}
+    <h1>{{ data[0].name }}</h1>
+    <ul>
+        <li>
+          {{ data[0].publish_date|date('F d Y') }}
+        </li>
+        <li>
+          <img src="{{ data[0].image|imageSize(200, 200) }}" />
+        </li>
+        <li>
+          {{ data[0].text|safe }}
+        </li>
+    </ul>
+    {% include "templates/partials/paginator.html" %}
+
+  </div>
+</div>
+{% endblock %}
