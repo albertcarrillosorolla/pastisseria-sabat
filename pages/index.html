@@ -7,13 +7,12 @@
 <div class="menu-div">
 <img id="menu-logo" src="{{ cms.home.logomenu|imageCrop(50, 27) }}"/>
 <ul>
-  <li><button id="tradiciolink">{{ cms.tradicioqualitat.name|upper }}</button></li>
-  <li><button id="creacionslink">{{ cms.lesnostrescreacions.name|upper }}</button></li>
-  <li><button id="establimentslink">{{ cms.establiments.name|upper }}</button></li>
-  <li><button id="noticieslink">{{ cms.noticiespage.name|upper }}</button></li>
-  <li><button id="contactalink">{{ cms.contacta.name|upper }}</button></li>
+  <li><a data-role="ajax" href="/tradicioqualitat" id="tradiciolink">{{ cms.tradicioqualitat.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/lesnostrescreacions" id="creacionslink">{{ cms.lesnostrescreacions.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/noticies" id="noticieslink">{{ cms.noticiespage.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/contacta" id="contactalink">{{ cms.contacta.name|upper }}</a></li>
 </ul></div>
 <div id="contentdiv" class="fullheight contentdiv">
-  <div id="contentloader"></div>
+  <div id="contentloader" class="fragment"></div>
 </div>
 {% endblock %}

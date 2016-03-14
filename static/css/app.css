@@ -1,8 +1,8 @@
 body{
-  background-color:#ff6600 ;/* #6a1520; #2485a7; */
+  background-color:#6a1520; /*#2485a7; */
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   font-weight: 300;
-  overflow: hidden;
+  /*overflow: hidden;*/
 }
 .fullheight{
   height: calc(100vh - 45px);
@@ -23,7 +23,7 @@ body{
   padding-left: 0px;
   display: inline;
 }
-.menu-div ul button{
+.menu-div ul a{
   text-decoration: none;
   color: white;
   padding-left: 25px;

@@ -1,15 +1,35 @@
+{% extends "templates/partials/base.html" %}
+{% block title %}{% parent %}{% endblock %}
+{% block content %}
+<div class="fullheight">
+  <img class="logo" src="{{ cms.home.logo|imageCrop(192, 170) }}"/>
+</div>
+<div class="menu-div">
+<img id="menu-logo" src="{{ cms.home.logomenu|imageCrop(50, 27) }}"/>
+<ul>
+  <li><a data-role="ajax" href="/tradicioqualitat" id="tradiciolink">{{ cms.tradicioqualitat.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/lesnostrescreacions" id="creacionslink">{{ cms.lesnostrescreacions.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/noticies" id="noticieslink">{{ cms.noticiespage.name|upper }}</a></li>
+  <li><a data-role="ajax" href="/contacta" id="contactalink">{{ cms.contacta.name|upper }}</a></li>
+</ul></div>
+<div id="contentdiv" class="fullheight contentdiv">
+  <div id="contentloader" class="fragment">
 
-<h1>{{ cms.lesnostrescreacions.name }}</h1>
- <ul>
-    {% for row in cms.lesnostrescreacions.grid %}
-        <li>
-          {{ row.nom }}
-        </li>
-        <li>
-          {{ row.text }}
-        </li>
-        <li>
-            <img src="{{ row.image|imageSize(200, 200) }}" />
-        </li>
-    {% endfor %}
-</ul>
+    <h1>{{ cms.lesnostrescreacions.name }}</h1>
+     <ul>
+        {% for row in cms.lesnostrescreacions.grid %}
+            <li>
+              {{ row.nom }}
+            </li>
+            <li>
+              {{ row.text }}
+            </li>
+            <li>
+                <img src="{{ row.image|imageSize(200, 200) }}" />
+            </li>
+        {% endfor %}
+    </ul>
+
+  </div>
+</div>
+{% endblock %}
