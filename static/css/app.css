@@ -41,7 +41,7 @@ body{
 #menu-logo{
   vertical-align: middle;
   display:inline-block;
-  opacity: 1.0;
+  opacity: 0.0;
   margin-left: 35px;
 }
 .contentdiv

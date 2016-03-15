@@ -1,6 +1,7 @@
 {% extends "templates/partials/base.html" %}
 {% block title %}{% parent %}{% endblock %}
 {% block content %}
+
 <div id="contentdiv" class="fullheight contentdiv">
   <div id="contentloader" class="fragment">
     {% set data = cms.noticies %}
@@ -19,7 +20,6 @@
         </li>
     </ul>
     {% include "templates/partials/paginator.html" %}
-
   </div>
 </div>
 {% endblock %}

@@ -1,5 +1,4 @@
 $(function () {
-
 function getPageName() {
     var pathName = window.location.pathname;
     var pageName = "";
@@ -10,22 +9,18 @@ function getPageName() {
     }
     return pageName;
 }
-
 function navigateToPage() {
-
    var pageName = getPageName();
    $.get(pageName, function (response) {
         var markup = $("<div>" + response + "</div>");
       	var fragment = markup.find("#contentloader").html();
 				$("#contentloader").fadeOut('fast',function(){$("#contentloader").html(fragment).fadeIn();});
-
    });
 	 //alert(pageName);
 	 if(pageName!=""){
 		 	goDown();
 	 }
 }
-
 $("a[data-role='ajax']").click(function (e) {
     if (Modernizr.history) {
         e.preventDefault();
@@ -34,8 +29,6 @@ $("a[data-role='ajax']").click(function (e) {
         navigateToPage();
     }
 });
-
-
 var _popStateEventCount = 0;
 $(window).on('popstate', function (e) {
     this._popStateEventCount++;
@@ -44,7 +37,6 @@ $(window).on('popstate', function (e) {
     //}
     navigateToPage();
 });
-
 $( document ).ready(function() {
   var pageName = window.location.pathname;
 	if(pageName!="/"){
