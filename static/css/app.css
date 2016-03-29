@@ -5,7 +5,8 @@ body{
   overflow: hidden;
 }
 .fullheight{
-  height: calc(100vh - 45px);
+height: calc(100vh - 45px);
+overflow: hidden;
 }
 .menu-div{
   height: 45px;
