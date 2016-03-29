@@ -45,6 +45,7 @@ body{
   display:inline-block;
   opacity: 0.0;
   margin-left: 35px;
+  cursor: pointer;
 }
 .contentdiv
 {
