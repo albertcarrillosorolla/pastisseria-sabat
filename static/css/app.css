@@ -49,6 +49,10 @@ body{
   overflow: hidden;
   background-color: rgba(255,255,255,0.9);
 }
+.noticies-container
+{
+  overflow: scroll;
+}
 .logo{
     max-width:100%;
     max-height:100%;

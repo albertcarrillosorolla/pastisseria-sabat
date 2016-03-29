@@ -4,6 +4,8 @@
 
 <div id="contentdiv" class="fullheight contentdiv">
   <div id="contentloader" class="fragment">
+    <div class="noticies-container">
+      <section>
     {% set data = cms.noticies %}
     {% set data = data|sort('publish_date', false) %}
     {% set data = paginate(data, 1) %}
@@ -19,7 +21,10 @@
           {{ data[0].text|safe }}
         </li>
     </ul>
+  </section>
     {% include "templates/partials/paginator.html" %}
   </div>
 </div>
+</div>
+
 {% endblock %}

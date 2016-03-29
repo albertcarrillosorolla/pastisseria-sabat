@@ -9,10 +9,10 @@
 
 <ul>
   {% if curPage > 1 %}
-  <li><a data-role="ajax" href="{{ getPageUrl(curPage - 1) }}">ENDAVANT</a></li>
+  <li><a class="back-page" data-role="ajax" href="{{ getPageUrl(curPage - 1) }}">ENDAVANT</a></li>
   {% endif %}
   {% if curPage < maxPage %}
-  <li><a data-role="ajax" href="{{ getPageUrl(curPage + 1) }}">ENDARRERE</a></li>
+  <li><a class="next-page" data-role="ajax" href="{{ getPageUrl(curPage + 1) }}">ENDARRERE</a></li>
   {% endif %}
 </ul>
 
