@@ -11,10 +11,11 @@ function getPageName() {
 }
 function navigateToPage() {
    var pageName = getPageName();
+   $("#contentloader").removeClass('contentvisible');
    $.get(pageName, function (response) {
         var markup = $("<div>" + response + "</div>");
       	var fragment = markup.find("#contentloader").html();
-				$("#contentloader").fadeOut('fast',function(){$("#contentloader").html(fragment).fadeIn();});
+				$("#contentloader").html(fragment).addClass('contentvisible');
    });
 	 //alert(pageName);
 	 if(pageName!=""){
@@ -62,6 +63,7 @@ $("#menu-logo").click(function(e){
 function goDown(){
 	$("body").css("overflow", "auto");
 	CONTENT_STATE = true;
+  $("#contentloader").addClass('contentvisible');
 	$("html, body").animate({ scrollTop: $(".menu-div").offset().top }, 1000, 'easeInOutQuart',  function(){
 	$(".menu-div ul").animate({ 'margin-left': "0" }, 400, function(){
 	$("#menu-logo").animate({ opacity: 1.0 });});});
@@ -71,7 +73,8 @@ function goUp(){
 	$("body").css("overflow", "hidden");
 	CONTENT_STATE = false;
 	$("html, body").animate({ scrollTop: 0 }, 1000,'easeInOutQuart', function(){
+  $("#contentloader").removeClass('contentvisible');
 	$("#menu-logo").animate({ opacity: 0 }, 400, function(){
 	$(".menu-div ul").animate({ 'margin-left': "-80px" });});});
-	$("#contentloader").fadeOut();
+
 }

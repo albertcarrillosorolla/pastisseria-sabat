@@ -11,10 +11,11 @@
   }
   function navigateToPage(page) {
      var pageName = page;
+     $("#contentloader").removeClass('contentvisible');
      $.get(pageName, function (response) {
           var markup = $("<div>" + response + "</div>");
         	var fragment = markup.find("#contentloader").html();
-  				$("#contentloader").fadeOut('fast',function(){$("#contentloader").html(fragment).fadeIn();});
+  				$("#contentloader").html(fragment).addClass('contentvisible');
      });
   	 if(pageName!=""){
   		 	goDown();
